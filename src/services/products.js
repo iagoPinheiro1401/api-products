@@ -18,7 +18,7 @@ export const deleteProduct = async (id) => {
     await Product.findByIdAndDelete(id)
 }
 
-export const updateNote = async (id, newBody) => {
+export const updateProduct = async (id, newBody) => {
     await databaseConnection()
     try {
       const updatedProduct = await Product.findByIdAndUpdate(id, newBody, { new: true })
